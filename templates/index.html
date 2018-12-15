@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- "How's your head?" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Mission to Mars </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/darkly/bootstrap.min.css">
+</head>
+
+<!-- Astral body-ody-ody~ -->
+<body>
+  <div class="container-fluid">
+    <!-- For the title -->
+    <div class="jumbotron text-center"> 
+      <h2> COME ON TELETUBBY, TELEPORT US TO MARS </h2>
+      <p><a class="btn btn-primary btn-lg btn-danger" href="/scrape" role="button">TELEPORT</a></p>
+    </div> 
+    <!-- Tammie Brown -->
+    <div class="row justify-content-center">
+      <div class="col-5">
+        <img src="http://33.media.tumblr.com/3b80088805bc68cf01a7945d8ad17180/tumblr_ntassiA65V1tulhy0o3_500.gif" class="rounded mx-auto d-block" alt="Responsive image">
+        <br> <br> 
+      </div>
+      <div class="col-5">
+        <img src="http://31.media.tumblr.com/7fde61a8f187402b85484345acf30194/tumblr_ntassiA65V1tulhy0o4_500.gif" class="rounded mx-auto d-block" alt="Responsive image">
+        <br> <br> 
+      </div>  
+    </div>
+    <!-- Row one: News and Weather -->
+    <div class="row">
+      <!-- Latest news -->
+      <div class="col-md-6"> 
+        <h3>Latest News</h3>
+        {%for news in dic_news%}
+        <h5>{{news.title}}</h5> 
+        <i><body>{{news.teaser}}</body></i>
+        <br> <br> <br> <br>
+        {% endfor %}
+      </div>
+      <!-- Martian weather -->
+      <div class="col-md-6"> 
+        <h3>Martian Weather</h3>
+        {%for weather in mars_weather%}
+        <p>{{weather.mars_weather}}</p>
+        {% endfor %} <br>
+      </div>
+    </div>
+    <!-- Row two: News and Weather -->
+    <div class="row">
+      <!-- Featured image -->
+      <div class="col-md-6">
+        <h3>Featured Mars Image</h3>
+        {%for image in featured_img%}
+        <img src="{{image.featured_img}}" alt="">
+        {% endfor %}  
+      </div>
+      <!-- Mars Facts Table -->
+      <div class="col-md-6" >
+        <h3>Mars Facts</h3>
+        <div> 
+          <table border="1" class="table table-bordered ">
+                        <thead>
+                        <tr style="text-align: center;">
+                          <th>Parameters</th>
+                          <th>Values</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Equatorial Diameter:</td>
+                          <td>6,792 km</td>
+                        </tr>
+                        <tr>
+                          <td>Polar Diameter:</td>
+                          <td>6,752 km</td>
+                        </tr>
+                        <tr>
+                          <td>Mass:</td>
+                          <td>6.42 x 10^23 kg (10.7% Earth)</td>
+                        </tr>
+                        <tr>
+                          <td>Moons:</td>
+                          <td>2 (Phobos &amp; Deimos)</td>
+                        </tr>
+                        <tr>
+                          <td>Orbit Distance:</td>
+                          <td>227,943,824 km (1.52 AU)</td>
+                        </tr>
+                        <tr>
+                          <td>Orbit Period:</td>
+                          <td>687 days (1.9 years)</td>
+                        </tr>
+                        <tr>
+                          <td>Surface Temperature:</td>
+                          <td>-153 to 20 °C</td>
+                        </tr>
+                        <tr>
+                          <td>First Record:</td>
+                          <td>2nd millennium BC</td>
+                        </tr>
+                        <tr>
+                          <td>Recorded By:</td>
+                          <td>Egyptian astronomers</td>
+                        </tr>
+                      </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Row three: website was under maintenance -->
+    <div class="row">
+      <div class="col">
+        <br> <br> <h3 style="text-align: center"> Website Under Maintenance for Hemisphere Data</h3> <br>
+        <blockquote class="imgur-embed-pub" lang="en" data-id="a/WlNdxGm"><a href="//imgur.com/WlNdxGm"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+      </div>
+    </div>
+  </div>
+</body>
+
